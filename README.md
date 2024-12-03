@@ -39,7 +39,13 @@
 **# Поиск всех вхождений значения
 indices = [index for index, value in enumerate(array) if value == target]
 return indices**
-# Пример использования arr = [34, 12, 56, 78, 12, 90, 23, 12] target_value = int(input("Введите число для поиска: ")) found_indices = sort_and_search(arr, target_value)
+# Пример использования
+
+arr = [34, 12, 56, 78, 12, 90, 23, 12]
+
+target_value = int(input("Введите число для поиска: ")) 
+
+found_indices = sort_and_search(arr, target_value)
 
 if found_indices: print(f"Значение {target_value} найдено на индексах: {found_indices}") else: print(f"Значение {target_value} не найдено.")
 
@@ -50,13 +56,21 @@ if found_indices: print(f"Значение {target_value} найдено на и
 def binary_search(arr, target): left, right = 0, len(arr) - 1 steps = 0
 
 while left <= right:
+   
     steps += 1
+   
     mid = (left + right) // 2
+  
     if arr[mid] == target:
+       
         return steps
+   
     elif arr[mid] < target:
+      
         right = mid - 1
+   
     else:
+       
         left = mid + 1
         
 return steps
