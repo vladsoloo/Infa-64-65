@@ -16,7 +16,7 @@ def find_max_duplicate(arr):
     return max_duplicate
 
 
-arr = [3, 5, 1, 3, 7, 8, 5, 2, 1]
+arr = [3, 5, 1, 9, 7, 8, 6, 2, 1]
 result = find_max_duplicate(arr)
 
 if result is not None:
